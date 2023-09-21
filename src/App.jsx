@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react';
+import { getEmployeesList } from './api/employees';
+import ManagementEmployees from './components/ManagementEmployess';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [employeesData, setEmployeesData] = useState([]);
+
+  useEffect(() => {
+    // const fetchData = async () => {
+    //   const data = await getEmployeesList();
+    //   setEmployeesData(data);
+    // };
+    // fetchData();
+
+    getEmployeesList().then((data) => setEmployeesData(data));
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <h1>Employees List</h1>
+      {employeesData?.length ? <> {JSON.stringify(employeesData)} </> : <p>No data</p>} */}
+
+      <ManagementEmployees test="team-fe" className="hello-world" />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
