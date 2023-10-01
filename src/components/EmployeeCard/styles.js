@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const EmployeeCardStyled = styled.div`
   padding: 25px;
-  margin: 15px;
+  /* margin-left: 5px; */
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: inline-block;
+  position: relative;
 
   .main-container {
     display: flex;

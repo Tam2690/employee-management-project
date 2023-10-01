@@ -11,12 +11,15 @@ const ManagementEmployeesStyle = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 20px;
+    margin: 20px 0;
   }
 
-  /* .list {
-    display: flex;
-  } */
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+  }
 `;
 
 export default ManagementEmployeesStyle;

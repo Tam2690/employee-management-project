@@ -9,6 +9,11 @@ export const getEmployeesList = async () => {
 
 const createEmployee = async () => {};
 
-const deleteEmployee = async () => {};
+export const deleteEmployee = async (employeeId) => {
+  const response = await request.delete(`${ENTITY}/${employeeId}`);
+  const updatedResponse = await getEmployeesList();
+  response.data = updatedResponse;
+  return response;
+};
 
 const updateEmployee = async () => {};
