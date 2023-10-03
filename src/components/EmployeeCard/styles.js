@@ -2,10 +2,14 @@ import styled from 'styled-components';
 
 const EmployeeCardStyled = styled.div`
   padding: 25px;
-  /* margin-left: 5px; */
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
+
+  &:hover {
+    transform: scale(0.98);
+    transition: all 0.3s;
+  }
 
   .main-container {
     display: flex;
@@ -52,6 +56,7 @@ const EmployeeCardStyled = styled.div`
       &:hover {
         cursor: pointer;
         transform: scale(0.9);
+        transition: all 0.3s;
       }
 
       &.edit-button:hover {

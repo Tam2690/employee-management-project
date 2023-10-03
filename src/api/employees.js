@@ -7,7 +7,12 @@ export const getEmployeesList = async () => {
   return response.data;
 };
 
-const createEmployee = async () => {};
+export const createEmployee = async (data) => {
+  const response = await request.post(ENTITY, data);
+  const updatedResponse = await getEmployeesList();
+  response.data = updatedResponse;
+  return response;
+};
 
 export const deleteEmployee = async (employeeId) => {
   const response = await request.delete(`${ENTITY}/${employeeId}`);

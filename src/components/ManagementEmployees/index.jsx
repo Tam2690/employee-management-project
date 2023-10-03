@@ -28,6 +28,7 @@ const ManagementEmployees = () => {
         <CreateEmployeeButton
           buttonText=" New Employee"
           buttonIcon={<FaPlus />}
+          setEmployeesData={setEmployeesData}
         />
       </div>
       <EmployeesList

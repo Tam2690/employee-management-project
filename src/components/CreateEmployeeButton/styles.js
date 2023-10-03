@@ -7,8 +7,7 @@ const CreateEmployeeButtonStyled = styled.button`
   border: none;
   outline: none;
   padding: 10px 25px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
   transition: 0.3s;
 
