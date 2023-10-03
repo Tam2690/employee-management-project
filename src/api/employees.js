@@ -21,4 +21,9 @@ export const deleteEmployee = async (employeeId) => {
   return response;
 };
 
-const updateEmployee = async () => {};
+export const updateEmployee = async (employeeId, data) => {
+  const response = await request.put(`${ENTITY}/${employeeId}`, data);
+  const updatedResponse = await getEmployeesList();
+  response.data = updatedResponse;
+  return response;
+};
