@@ -17,10 +17,12 @@ const CreateEmployeeButton = ({ buttonText, buttonIcon, setEmployeesData }) => {
       </CreateEmployeeButtonStyled>
       {isShowModal &&
         createPortal(
-          <CreateEmployeeModal
-            setIsShowModal={setIsShowModal}
-            setEmployeesData={setEmployeesData}
-          />,
+          <div className="blur">
+            <CreateEmployeeModal
+              setIsShowModal={setIsShowModal}
+              setEmployeesData={setEmployeesData}
+            />
+          </div>,
           document.body
         )}
     </>
