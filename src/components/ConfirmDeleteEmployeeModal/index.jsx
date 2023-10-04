@@ -23,7 +23,7 @@ const ConfirmDeleteEmployeeModal = ({
     <div className="blur">
       <ConfirmDeleteEmployeeModalStyled>
         <Title content="Confirm Delete Employee" />
-        <p>Are you sure you want delete employee:</p>
+        <p>Are you sure you want to delete employee:</p>
         <h3>{filteredEmployee[0].fullName}</h3>
         <div className="action-buttons">
           <button onClick={() => handleDeleteClick()}>Delete</button>
