@@ -9,10 +9,14 @@ const ConfirmDeleteEmployeeModal = ({
   setEmployeesData,
   employeesData,
 }) => {
-  const handleDeleteClick = async () => {
+  const handleClickDelete = async () => {
     const response = await deleteEmployee(employeeId);
     setEmployeesData(response.data);
     showToast('Delete employee successfully!');
+  };
+
+  const handleClickCancel = () => {
+    setIsShowConfirmDeleteModal(false);
   };
 
   const filteredEmployee = employeesData.filter(
@@ -26,14 +30,8 @@ const ConfirmDeleteEmployeeModal = ({
         <p>Are you sure you want to delete employee:</p>
         <h3>{filteredEmployee[0].fullName}</h3>
         <div className="action-buttons">
-          <button onClick={() => handleDeleteClick()}>Delete</button>
-          <button
-            onClick={() => {
-              setIsShowConfirmDeleteModal(false);
-            }}
-          >
-            Cancel
-          </button>
+          <button onClick={() => handleClickDelete()}>Delete</button>
+          <button onClick={handleClickCancel}>Cancel</button>
         </div>
       </ConfirmDeleteEmployeeModalStyled>
     </div>

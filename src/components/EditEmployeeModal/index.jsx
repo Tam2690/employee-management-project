@@ -26,6 +26,10 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
 
   const { handleSubmit, handleChange, values } = formik;
 
+  const handleClickCancel = () => {
+    setIsShowModal(false);
+  };
+
   return (
     <div className="blur">
       <EditEmployeeModalStyled>
@@ -74,13 +78,7 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
           />
           <div className="action-buttons">
             <button type="submit">Update</button>
-            <button
-              onClick={() => {
-                setIsShowModal(false);
-              }}
-            >
-              Cancel
-            </button>
+            <button onClick={handleClickCancel}>Cancel</button>
           </div>
         </form>
       </EditEmployeeModalStyled>

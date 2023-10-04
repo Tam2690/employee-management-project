@@ -24,6 +24,10 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
 
   const { handleSubmit, handleChange, values } = formik;
 
+  const handleClickCancel = () => {
+    setIsShowModal(false);
+  };
+
   return (
     <CreateEmployeeModalStyled>
       <Title
@@ -74,7 +78,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
         />
         <div className="action-buttons">
           <button type="submit">Create</button>
-          <button onClick={() => setIsShowModal(false)}>Cancel</button>
+          <button onClick={handleClickCancel}>Cancel</button>
         </div>
       </form>
     </CreateEmployeeModalStyled>
