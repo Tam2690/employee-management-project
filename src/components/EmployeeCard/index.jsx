@@ -8,13 +8,16 @@ import OnlineIcon from '../OnlineIcon';
 import EditEmployeeModal from '../EditEmployeeModal';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
+import ConfirmDeleteEmployeeModal from '../ConfirmDeleteEmployeeModal';
 
-const EmployeeCard = ({ data, setEmployeesData }) => {
+const EmployeeCard = ({ data, setEmployeesData, employeesData }) => {
   const { address, avatarSrc, email, fullName, id, isOnline, role } = data;
 
   const [isShowModal, setIsShowModal] = useState(false);
-
+  const [isShowConfirmDeleteModal, setIsShowConfirmDeleteModal] =
+    useState(false);
   const [dataForm, setDataForm] = useState([]);
+  const [employeeId, setEmployeeId] = useState(0);
 
   const handleEditEmployee = async (id) => {
     const response = await getEmployeesList();
@@ -24,17 +27,19 @@ const EmployeeCard = ({ data, setEmployeesData }) => {
   };
 
   const handleDeleteEmployee = async (id) => {
-    const response = await deleteEmployee(id);
-    setEmployeesData(response.data);
-    showToast('Delete employee successfully!');
+    setIsShowConfirmDeleteModal(true);
+    setEmployeeId(id);
   };
+
+  const NoAvatarSrc =
+    'https://cdn1.iconfinder.com/data/icons/avatar-3/512/Manager-512.png';
 
   return (
     <EmployeeCardStyled>
       {isOnline === true ? <OnlineIcon /> : <p></p>}
       <div className="main-container">
         <section className="employee-avatar">
-          <img src={avatarSrc} alt="avatar.png" />
+          <img src={avatarSrc || NoAvatarSrc} alt="avatar.png" />
         </section>
         <section className="employee-info">
           <span>{fullName}</span>
@@ -65,6 +70,16 @@ const EmployeeCard = ({ data, setEmployeesData }) => {
         >
           <FaTrashCan />
         </button>
+        {isShowConfirmDeleteModal &&
+          createPortal(
+            <ConfirmDeleteEmployeeModal
+              setIsShowConfirmDeleteModal={setIsShowConfirmDeleteModal}
+              employeeId={employeeId}
+              setEmployeesData={setEmployeesData}
+              employeesData={employeesData}
+            />,
+            document.body
+          )}
       </section>
     </EmployeeCardStyled>
   );

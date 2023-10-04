@@ -12,6 +12,7 @@ const EmployeesList = ({ employeesData, setEmployeesData }) => {
             key={employee.id}
             data={employee}
             setEmployeesData={setEmployeesData}
+            employeesData={employeesData}
           />
         ))
       ) : (
