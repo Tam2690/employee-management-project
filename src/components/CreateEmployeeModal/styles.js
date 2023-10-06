@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CreateEmployeeModalStyled = styled.div`
+export const CreateEmployeeModalStyled = styled.div`
   background: white;
   position: absolute;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -16,14 +16,22 @@ const CreateEmployeeModalStyled = styled.div`
     flex-direction: column;
 
     & > input {
-      margin-top: 35px;
+      margin-top: 12px;
       padding: 10px 15px;
       border-radius: 10px;
       outline: none;
       border: 1px solid #80808085;
 
       &:focus {
-        border: 1.5px solid #808080;
+        border: 1px solid #808080;
+      }
+    }
+
+    & > .error-field {
+      border: 2px solid red;
+
+      &::placeholder {
+        color: red;
       }
     }
   }
@@ -64,4 +72,8 @@ const CreateEmployeeModalStyled = styled.div`
   }
 `;
 
-export default CreateEmployeeModalStyled;
+export const ErrorFieldStyled = styled.p`
+  color: red;
+  margin-top: 5px;
+  padding: 0 10px;
+`;
