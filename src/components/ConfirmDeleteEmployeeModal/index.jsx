@@ -21,7 +21,7 @@ const ConfirmDeleteEmployeeModal = ({
   };
 
   const filteredEmployee = employeesData.filter(
-    (employee) => employee.id === employeeId,
+    (employee) => employee.id === employeeId
   );
 
   return (
