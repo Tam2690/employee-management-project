@@ -2,6 +2,7 @@ import { deleteEmployee } from 'src/api/employees';
 import Title from '../Title';
 import ConfirmDeleteEmployeeModalStyled from './styles';
 import { showToast } from 'src/hoc/withShowNotification';
+import PropTypes from 'prop-types';
 
 const ConfirmDeleteEmployeeModal = ({
   setIsShowConfirmDeleteModal,
@@ -26,7 +27,7 @@ const ConfirmDeleteEmployeeModal = ({
   return (
     <div className="blur">
       <ConfirmDeleteEmployeeModalStyled>
-        <Title content="Confirm Delete Employee" />
+        <Title content="Confirm Delete Employee" customStyles={undefined} />
         <p>Are you sure you want to delete employee:</p>
         <h3>{filteredEmployee[0].fullName}</h3>
         <div className="action-buttons">
@@ -36,6 +37,13 @@ const ConfirmDeleteEmployeeModal = ({
       </ConfirmDeleteEmployeeModalStyled>
     </div>
   );
+};
+
+ConfirmDeleteEmployeeModal.propTypes = {
+  setIsShowConfirmDeleteModal: PropTypes.func,
+  employeeId: PropTypes.any,
+  setEmployeesData: PropTypes.func,
+  employeesData: PropTypes.array,
 };
 
 export default ConfirmDeleteEmployeeModal;

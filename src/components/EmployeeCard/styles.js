@@ -80,5 +80,9 @@ const EmployeeCardStyled = styled.div`
       margin-top: 8px;
     }
   }
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 `;
 export default EmployeeCardStyled;

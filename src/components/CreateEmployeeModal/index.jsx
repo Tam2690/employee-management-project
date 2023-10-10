@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// import { CSSProperties } from 'react';
+import { useState } from 'react';
 import { CreateEmployeeModalStyled, ErrorFieldStyled } from './styles';
 import Title from '../Title';
 import { useFormik } from 'formik';
@@ -6,9 +7,12 @@ import { createEmployee } from 'src/api/employees';
 import { showToast } from 'src/hoc/withShowNotification';
 import { CreateEmployeeSchema } from 'src/schemas/createEmployee.schemas';
 import SelectInput from '../SelectInput';
+import PropTypes from 'prop-types';
+import ShowDropdownIcon from '../ShowDropdownIcon';
 
 const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
   const [isShowDropdown, setIsShowDropdown] = useState(false);
+  const [isSelecting, setIsSelecting] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -28,10 +32,15 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
     },
   });
 
-  const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
-    formik;
-
-  console.log(handleBlur);
+  const {
+    handleSubmit,
+    handleChange,
+    handleBlur,
+    values,
+    errors,
+    touched,
+    setFieldValue,
+  } = formik;
 
   const handleClickCancel = () => {
     setIsShowModal(false);
@@ -46,11 +55,14 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
   };
 
   const handleClickRoleField = () => {
-    setIsShowDropdown(true);
+    setIsShowDropdown(!isShowDropdown);
   };
 
-  const handleBlurRoleField = () => {
-    setIsShowDropdown(false);
+  const handleBlurRoleField = (event) => {
+    event.preventDefault();
+    if (isSelecting === false) {
+      setIsShowDropdown(false);
+    }
   };
 
   return (
@@ -68,13 +80,26 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           autoFocus
           onChange={handleChange}
           value={values.role}
-          onBlur={handleBlur && handleBlurRoleField}
-          className={errors['role'] && touched['role'] ? 'error-field' : ''}
+          onBlur={handleBlurRoleField}
+          className={
+            errors['role'] && touched['role'] ? 'error-field' : 'role-field'
+          }
           onClick={handleClickRoleField}
           readOnly
         />
-        {isShowDropdown && <SelectInput />}
+
+        <ShowDropdownIcon isShowDropdown={isShowDropdown} />
+
+        {isShowDropdown && (
+          <SelectInput
+            setIsSelecting={setIsSelecting}
+            setFieldValue={setFieldValue}
+            setIsShowDropdown={setIsShowDropdown}
+            name="role"
+          />
+        )}
         {handleErrorField('role')}
+
         <input
           type="search"
           name="fullName"
@@ -88,6 +113,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           }
         />
         {handleErrorField('fullName')}
+
         <input
           type="search"
           name="email"
@@ -99,6 +125,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           className={errors['email'] && touched['email'] ? 'error-field' : ''}
         />
         {handleErrorField('email')}
+
         <input
           type="search"
           name="address"
@@ -112,6 +139,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           }
         />
         {handleErrorField('address')}
+
         <input
           type="search"
           name="avatarSrc"
@@ -127,6 +155,11 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
       </form>
     </CreateEmployeeModalStyled>
   );
+};
+
+CreateEmployeeModal.propTypes = {
+  setIsShowModal: PropTypes.func,
+  setEmployeesData: PropTypes.func,
 };
 
 export default CreateEmployeeModal;

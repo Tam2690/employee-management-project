@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CreateEmployeeButtonStyled = styled.button`
+export const CreateEmployeeButtonStyled = styled.button`
   background: #00b894;
   color: white;
   border-radius: 8px;

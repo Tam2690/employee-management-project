@@ -6,7 +6,8 @@
       "email": "tam2690@gmail.com",
       "address": "Danang",
       "avatarSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_C7Z8ZqwXwFuKEpJiI3tukHzQfv3MxPN0qQ&usqp=CAU",
-      "id": "xjvzVzc"
+      "id": "xjvzVzc",
+      "isOnline": true
     },
     {
       "role": "Backend Developer",
@@ -17,18 +18,19 @@
       "id": "qFBHXiJ"
     },
     {
-      "role": "Mid Laner",
+      "role": "Product Manager",
       "fullName": "Akali",
       "email": "akali@yahoo.com",
       "address": "Ionia",
       "avatarSrc": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/218ec8a8-f79c-4c80-9a42-47afad613d38/deds8dx-6a3a68a9-50b0-4ed0-98c7-e53c1fb82e0f.jpg/v1/fill/w_811,h_985,q_70,strp/sexy_akali_cosplay_by_fallengod787_deds8dx-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU1NCIsInBhdGgiOiJcL2ZcLzIxOGVjOGE4LWY3OWMtNGM4MC05YTQyLTQ3YWZhZDYxM2QzOFwvZGVkczhkeC02YTNhNjhhOS01MGIwLTRlZDAtOThjNy1lNTNjMWZiODJlMGYuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.MSWc-9gdADXVD1b7ogLAvKeVyJZYj2WPXCljjVRTj4k",
-      "id": "jU8xSJu"
+      "id": "jU8xSJu",
+      "isOnline": true
     },
     {
-      "role": "Feed Laner",
+      "role": "Quality Assurance",
       "fullName": "Đấng",
       "email": "yasua@gmail.com",
-      "address": "Ionia",
+      "address": "Ionia3",
       "avatarSrc": "https://i.pinimg.com/736x/a5/48/07/a5480768951f792b92e3ffceb2fa3a4e.jpg",
       "id": "1RUL8p9"
     },
@@ -36,9 +38,43 @@
       "role": "Fullstack Developer",
       "fullName": "Hidden Person",
       "email": "noavatar@gmail.com",
-      "address": "Sao hoả",
+      "address": "Sao Hoả",
       "avatarSrc": "",
-      "id": "DgX1mB-"
+      "id": "DgX1mB-",
+      "isOnline": true
+    },
+    {
+      "role": "Product Owner",
+      "fullName": "Fiora",
+      "email": "fiora@yahoo.com",
+      "address": "Demacia",
+      "avatarSrc": "https://img-cdn.2game.vn/pictures/xemgame/2018/03/16/cosplay-Fiora-Tiec-Be-Boi-1.png",
+      "id": "u1zgeXM"
+    },
+    {
+      "role": "Backend Developer",
+      "fullName": "Miss Fortune",
+      "email": "mfortune@gmail.com",
+      "address": "Bilgewater",
+      "avatarSrc": "https://images-cdn.9gag.com/photo/a1r6XvG_700b.jpg",
+      "id": "ipMyXEV"
+    },
+    {
+      "role": "Quality Assurance",
+      "fullName": "Sona",
+      "email": "sona@gmail.com",
+      "address": "Ionia",
+      "avatarSrc": "https://i.pinimg.com/originals/0b/5c/66/0b5c66b90680df1b36e83b17544eaf43.jpg",
+      "id": "I4UtWyY",
+      "isOnline": true
+    },
+    {
+      "role": "Frontend Developer",
+      "fullName": "Anh Da Đen Hai Súng",
+      "email": "lucian@yahoo.com",
+      "address": "Demacia",
+      "avatarSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdBfgvXR5lLfuTmDoQ6qaCP8OWmAvoUPGj0rwANkWl2WSgZB9AYl883aWlj7MaYVPxELU&usqp=CAU",
+      "id": "Z-0iTZl"
     }
   ]
 }

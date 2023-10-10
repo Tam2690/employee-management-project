@@ -16,14 +16,25 @@ const EditEmployeeModalStyled = styled.div`
     flex-direction: column;
 
     & > input {
-      margin-top: 35px;
+      margin-top: 12px;
       padding: 10px 15px;
       border-radius: 10px;
       outline: none;
       border: 1px solid #80808085;
+      position: relative;
+      z-index: 1;
+      background: none;
 
       &:focus {
-        border: 1.5px solid #808080;
+        border: 1px solid #36454f;
+      }
+    }
+
+    & > .error-field {
+      border: 2px solid red;
+
+      &::placeholder {
+        color: red;
       }
     }
   }
@@ -61,6 +72,10 @@ const EditEmployeeModalStyled = styled.div`
         box-shadow: 5px 5px 7px #8080808c;
       }
     }
+  }
+
+  @media (max-width: 560px) {
+    width: 90%;
   }
 `;
 

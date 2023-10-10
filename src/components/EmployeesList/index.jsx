@@ -1,7 +1,7 @@
-import React from 'react';
 import EmployeesListStyled from './styles';
 import EmployeeCard from '../EmployeeCard';
 import NoDataNotification from '../NoDataNotification';
+import PropTypes from 'prop-types';
 
 const EmployeesList = ({ employeesData, setEmployeesData }) => {
   return (
@@ -20,6 +20,11 @@ const EmployeesList = ({ employeesData, setEmployeesData }) => {
       )}
     </EmployeesListStyled>
   );
+};
+
+EmployeesList.propTypes = {
+  employeesData: PropTypes.array,
+  setEmployeesData: PropTypes.func,
 };
 
 export default EmployeesList;

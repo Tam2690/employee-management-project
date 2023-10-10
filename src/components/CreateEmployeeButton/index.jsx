@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CreateEmployeeButtonStyled from './styles';
 import { createPortal } from 'react-dom';
 import CreateEmployeeModal from '../CreateEmployeeModal';
+import PropTypes from 'prop-types';
 
 const CreateEmployeeButton = ({ buttonText, buttonIcon, setEmployeesData }) => {
   const [isShowModal, setIsShowModal] = useState(false);
@@ -27,6 +28,12 @@ const CreateEmployeeButton = ({ buttonText, buttonIcon, setEmployeesData }) => {
         )}
     </>
   );
+};
+
+CreateEmployeeButton.propTypes = {
+  buttonText: PropTypes.string,
+  buttonIcon: PropTypes.any,
+  setEmployeesData: PropTypes.func,
 };
 
 export default CreateEmployeeButton;

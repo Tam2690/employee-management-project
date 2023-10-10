@@ -1,14 +1,13 @@
 import EmployeeCardStyled from './styles';
 import { FaPenToSquare } from 'react-icons/fa6';
 import { FaTrashCan } from 'react-icons/fa6';
-import { toast } from 'react-toastify';
-import { deleteEmployee, getEmployeesList } from 'src/api/employees';
-import { showToast } from 'src/hoc/withShowNotification';
+import { getEmployeesList } from 'src/api/employees';
 import OnlineIcon from '../OnlineIcon';
 import EditEmployeeModal from '../EditEmployeeModal';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import ConfirmDeleteEmployeeModal from '../ConfirmDeleteEmployeeModal';
+import PropTypes from 'prop-types';
 
 const EmployeeCard = ({ data, setEmployeesData, employeesData }) => {
   const { address, avatarSrc, email, fullName, id, isOnline, role } = data;
@@ -83,6 +82,12 @@ const EmployeeCard = ({ data, setEmployeesData, employeesData }) => {
       </section>
     </EmployeeCardStyled>
   );
+};
+
+EmployeeCard.propTypes = {
+  data: PropTypes.object,
+  setEmployeesData: PropTypes.func,
+  employeesData: PropTypes.array,
 };
 
 export default EmployeeCard;

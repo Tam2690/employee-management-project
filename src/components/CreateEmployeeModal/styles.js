@@ -21,9 +21,12 @@ export const CreateEmployeeModalStyled = styled.div`
       border-radius: 10px;
       outline: none;
       border: 1px solid #80808085;
+      position: relative;
+      z-index: 1;
+      background: none;
 
       &:focus {
-        border: 1px solid #808080;
+        border: 1px solid #36454f;
       }
     }
 
@@ -69,6 +72,10 @@ export const CreateEmployeeModalStyled = styled.div`
         box-shadow: 5px 5px 7px #8080808c;
       }
     }
+  }
+
+  @media (max-width: 560px) {
+    width: 90%;
   }
 `;
 

@@ -7,7 +7,7 @@ const EmployeesListStyled = styled.div`
   grid-gap: 30px;
   margin-top: 30px;
   position: relative;
-  min-height: 200px;
+  min-height: 210px;
   max-height: 72vh;
   overflow-y: scroll;
 

@@ -1,11 +1,9 @@
 import withShowNotification from '../../hoc/withShowNotification';
-import { showToast } from '../../hoc/withShowNotification';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import ManagementEmployeesStyle from './styles';
 import Title from '../Title';
 import CreateEmployeeButton from '../CreateEmployeeButton';
 import { FaPlus } from 'react-icons/fa6';
-// import EmployeeCard from '../EmployeeCard';
 import EmployeesList from '../EmployeesList';
 import { useEffect, useState } from 'react';
 import { getEmployeesList } from 'src/api/employees';

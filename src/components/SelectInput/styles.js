@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const SelectInputStyled = styled.div`
   outline: none;
   position: relative;
+  z-index: 99;
 
   .pseudo-div {
     width: 20px;
