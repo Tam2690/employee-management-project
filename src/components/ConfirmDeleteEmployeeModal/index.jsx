@@ -1,4 +1,4 @@
-giimport { deleteEmployee } from "src/api/employees";
+import { deleteEmployee } from "src/api/employees";
 import Title from "../Title";
 import ConfirmDeleteEmployeeModalStyled from "./styles";
 import { showToast } from "src/hoc/withShowNotification";
