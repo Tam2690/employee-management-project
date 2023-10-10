@@ -11,7 +11,8 @@ export const CreateEmployeeSchema = yup.object().shape({
   email: yup
     .string()
     .required('Email is required!')
-    .email('Invalid email address'),
+    .email('Invalid email address')
+    .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Invalid email address'),
   address: yup
     .string()
     .required('Address is required!')
