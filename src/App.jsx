@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import './App.css';
 // import { getEmployeesList } from './api/employees';
 import ManagementEmployees from './components/ManagementEmployees';

@@ -1,4 +1,3 @@
-import withShowNotification from '../../hoc/withShowNotification';
 import { ToastContainer } from 'react-toastify';
 import ManagementEmployeesStyle from './styles';
 import Title from '../Title';
@@ -38,4 +37,4 @@ const ManagementEmployees = () => {
   );
 };
 
-export default withShowNotification(ManagementEmployees);
+export default ManagementEmployees;
