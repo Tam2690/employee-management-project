@@ -1,6 +1,6 @@
-import { SELECT_INPUT_DATA } from 'src/data/SelectInputData';
-import SelectInputStyled from './styles';
-import PropTypes from 'prop-types';
+import { SELECT_INPUT_DATA } from "src/data/SelectInputData";
+import SelectInputStyled from "./styles";
+import PropTypes from "prop-types";
 
 const SelectInput = ({
   setIsSelecting,

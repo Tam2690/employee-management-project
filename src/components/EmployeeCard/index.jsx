@@ -1,13 +1,13 @@
-import EmployeeCardStyled from './styles';
-import { FaPenToSquare } from 'react-icons/fa6';
-import { FaTrashCan } from 'react-icons/fa6';
-import { getEmployeesList } from 'src/api/employees';
-import OnlineIcon from '../OnlineIcon';
-import EditEmployeeModal from '../EditEmployeeModal';
-import { useState } from 'react';
-import { createPortal } from 'react-dom';
-import ConfirmDeleteEmployeeModal from '../ConfirmDeleteEmployeeModal';
-import PropTypes from 'prop-types';
+import EmployeeCardStyled from "./styles";
+import { FaPenToSquare } from "react-icons/fa6";
+import { FaTrashCan } from "react-icons/fa6";
+import { getEmployeesList } from "src/api/employees";
+import OnlineIcon from "../OnlineIcon";
+import EditEmployeeModal from "../EditEmployeeModal";
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import ConfirmDeleteEmployeeModal from "../ConfirmDeleteEmployeeModal";
+import PropTypes from "prop-types";
 
 const EmployeeCard = ({ data, setEmployeesData, employeesData }) => {
   const { address, avatarSrc, email, fullName, id, isOnline, role } = data;
@@ -31,7 +31,7 @@ const EmployeeCard = ({ data, setEmployeesData, employeesData }) => {
   };
 
   const NoAvatarSrc =
-    'https://cdn1.iconfinder.com/data/icons/avatar-3/512/Manager-512.png';
+    "https://cdn1.iconfinder.com/data/icons/avatar-3/512/Manager-512.png";
 
   return (
     <EmployeeCardStyled>
@@ -61,7 +61,7 @@ const EmployeeCard = ({ data, setEmployeesData, employeesData }) => {
               dataForm={dataForm}
               setEmployeesData={setEmployeesData}
             />,
-            document.body
+            document.body,
           )}
         <button
           className="action-button delete-button"
@@ -77,7 +77,7 @@ const EmployeeCard = ({ data, setEmployeesData, employeesData }) => {
               setEmployeesData={setEmployeesData}
               employeesData={employeesData}
             />,
-            document.body
+            document.body,
           )}
       </section>
     </EmployeeCardStyled>

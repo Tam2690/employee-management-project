@@ -1,6 +1,6 @@
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
-import ShowDropdownIconStyled from './styles';
-import PropTypes from 'prop-types';
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+import ShowDropdownIconStyled from "./styles";
+import PropTypes from "prop-types";
 
 const ShowDropdownIcon = ({ isShowDropdown }) => {
   return (

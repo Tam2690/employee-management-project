@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CreateEmployeeButtonStyled = styled.button`
   background: #00b894;

@@ -1,14 +1,14 @@
 // import { CSSProperties } from 'react';
-import { useState } from 'react';
-import { CreateEmployeeModalStyled, ErrorFieldStyled } from './styles';
-import Title from '../Title';
-import { useFormik } from 'formik';
-import { createEmployee } from 'src/api/employees';
-import { showToast } from 'src/hoc/withShowNotification';
-import { CreateEmployeeSchema } from 'src/schemas/createEmployee.schemas';
-import SelectInput from '../SelectInput';
-import PropTypes from 'prop-types';
-import ShowDropdownIcon from '../ShowDropdownIcon';
+import { useState } from "react";
+import { CreateEmployeeModalStyled, ErrorFieldStyled } from "./styles";
+import Title from "../Title";
+import { useFormik } from "formik";
+import { createEmployee } from "src/api/employees";
+import { showToast } from "src/hoc/withShowNotification";
+import { CreateEmployeeSchema } from "src/schemas/createEmployee.schemas";
+import SelectInput from "../SelectInput";
+import PropTypes from "prop-types";
+import ShowDropdownIcon from "../ShowDropdownIcon";
 
 const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
   const [isShowDropdown, setIsShowDropdown] = useState(false);
@@ -16,11 +16,11 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
 
   const formik = useFormik({
     initialValues: {
-      role: '',
-      fullName: '',
-      email: '',
-      address: '',
-      avatarSrc: '',
+      role: "",
+      fullName: "",
+      email: "",
+      address: "",
+      avatarSrc: "",
     },
     validationSchema: CreateEmployeeSchema,
 
@@ -28,7 +28,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
       const response = await createEmployee(values);
       setEmployeesData(response.data);
       setIsShowModal(false);
-      showToast('Create new employee successfully!');
+      showToast("Create new employee successfully!");
     },
   });
 
@@ -50,7 +50,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
     return errors[field] && touched[field] ? (
       <ErrorFieldStyled>{errors[field]}</ErrorFieldStyled>
     ) : (
-      <div style={{ marginTop: '31px' }}></div>
+      <div style={{ marginTop: "31px" }}></div>
     );
   };
 
@@ -69,7 +69,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
     <CreateEmployeeModalStyled>
       <Title
         content="Create New Employee"
-        customStyles={{ textAlign: 'center' }}
+        customStyles={{ textAlign: "center" }}
       />
       <form action="" className="form" onSubmit={handleSubmit}>
         <input
@@ -82,7 +82,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           value={values.role}
           onBlur={handleBlurRoleField}
           className={
-            errors['role'] && touched['role'] ? 'error-field' : 'role-field'
+            errors["role"] && touched["role"] ? "error-field" : "role-field"
           }
           onClick={handleClickRoleField}
           readOnly
@@ -98,7 +98,7 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
             name="role"
           />
         )}
-        {handleErrorField('role')}
+        {handleErrorField("role")}
 
         <input
           type="search"
@@ -109,10 +109,10 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           value={values.fullName}
           onBlur={handleBlur}
           className={
-            errors['fullName'] && touched['fullName'] ? 'error-field' : ''
+            errors["fullName"] && touched["fullName"] ? "error-field" : ""
           }
         />
-        {handleErrorField('fullName')}
+        {handleErrorField("fullName")}
 
         <input
           type="search"
@@ -122,9 +122,9 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           onChange={handleChange}
           value={values.email}
           onBlur={handleBlur}
-          className={errors['email'] && touched['email'] ? 'error-field' : ''}
+          className={errors["email"] && touched["email"] ? "error-field" : ""}
         />
-        {handleErrorField('email')}
+        {handleErrorField("email")}
 
         <input
           type="search"
@@ -135,10 +135,10 @@ const CreateEmployeeModal = ({ setIsShowModal, setEmployeesData }) => {
           value={values.address}
           onBlur={handleBlur}
           className={
-            errors['address'] && touched['address'] ? 'error-field' : ''
+            errors["address"] && touched["address"] ? "error-field" : ""
           }
         />
-        {handleErrorField('address')}
+        {handleErrorField("address")}
 
         <input
           type="search"

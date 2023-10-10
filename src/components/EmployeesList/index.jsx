@@ -1,7 +1,7 @@
-import EmployeesListStyled from './styles';
-import EmployeeCard from '../EmployeeCard';
-import NoDataNotification from '../NoDataNotification';
-import PropTypes from 'prop-types';
+import EmployeesListStyled from "./styles";
+import EmployeeCard from "../EmployeeCard";
+import NoDataNotification from "../NoDataNotification";
+import PropTypes from "prop-types";
 
 const EmployeesList = ({ employeesData, setEmployeesData }) => {
   return (

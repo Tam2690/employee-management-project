@@ -1,14 +1,14 @@
-import { useFormik } from 'formik';
-import Title from '../Title';
-import EditEmployeeModalStyled from './styles';
-import { updateEmployee } from 'src/api/employees';
-import { showToast } from 'src/hoc/withShowNotification';
-import { ErrorFieldStyled } from '../CreateEmployeeModal/styles';
-import SelectInput from '../SelectInput';
-import { useState } from 'react';
-import { CreateEmployeeSchema } from 'src/schemas/createEmployee.schemas';
-import PropTypes from 'prop-types';
-import ShowDropdownIcon from '../ShowDropdownIcon';
+import { useFormik } from "formik";
+import Title from "../Title";
+import EditEmployeeModalStyled from "./styles";
+import { updateEmployee } from "src/api/employees";
+import { showToast } from "src/hoc/withShowNotification";
+import { ErrorFieldStyled } from "../CreateEmployeeModal/styles";
+import SelectInput from "../SelectInput";
+import { useState } from "react";
+import { CreateEmployeeSchema } from "src/schemas/createEmployee.schemas";
+import PropTypes from "prop-types";
+import ShowDropdownIcon from "../ShowDropdownIcon";
 
 const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
   const { role, fullName, email, address, avatarSrc, id } = dataForm[0];
@@ -29,7 +29,7 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
       const response = await updateEmployee(id, data);
       setEmployeesData(response.data);
       setIsShowModal(false);
-      showToast('Update employee successfully!');
+      showToast("Update employee successfully!");
     },
   });
 
@@ -51,7 +51,7 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
     return errors[field] && touched[field] ? (
       <ErrorFieldStyled>{errors[field]}</ErrorFieldStyled>
     ) : (
-      <div style={{ marginTop: '31px' }}></div>
+      <div style={{ marginTop: "31px" }}></div>
     );
   };
 
@@ -71,7 +71,7 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
       <EditEmployeeModalStyled>
         <Title
           content="Create New Employee"
-          customStyles={{ textAlign: 'center' }}
+          customStyles={{ textAlign: "center" }}
         />
         <form action="" className="form" onSubmit={handleSubmit}>
           <input
@@ -84,7 +84,7 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
             value={values.role}
             onBlur={handleBlurRoleField}
             className={
-              errors['role'] && touched['role'] ? 'error-field' : 'role-field'
+              errors["role"] && touched["role"] ? "error-field" : "role-field"
             }
             onClick={handleClickRoleField}
             readOnly
@@ -100,7 +100,7 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
               name="role"
             />
           )}
-          {handleErrorField('role')}
+          {handleErrorField("role")}
 
           <input
             type="search"
@@ -111,10 +111,10 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
             value={values.fullName}
             onBlur={handleBlur}
             className={
-              errors['fullName'] && touched['fullName'] ? 'error-field' : ''
+              errors["fullName"] && touched["fullName"] ? "error-field" : ""
             }
           />
-          {handleErrorField('fullName')}
+          {handleErrorField("fullName")}
 
           <input
             type="search"
@@ -124,9 +124,9 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
             onChange={handleChange}
             value={values.email}
             onBlur={handleBlur}
-            className={errors['email'] && touched['email'] ? 'error-field' : ''}
+            className={errors["email"] && touched["email"] ? "error-field" : ""}
           />
-          {handleErrorField('email')}
+          {handleErrorField("email")}
 
           <input
             type="search"
@@ -137,10 +137,10 @@ const EditEmployeeModal = ({ setIsShowModal, dataForm, setEmployeesData }) => {
             value={values.address}
             onBlur={handleBlur}
             className={
-              errors['address'] && touched['address'] ? 'error-field' : ''
+              errors["address"] && touched["address"] ? "error-field" : ""
             }
           />
-          {handleErrorField('address')}
+          {handleErrorField("address")}
 
           <input
             type="search"

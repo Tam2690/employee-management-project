@@ -1,4 +1,4 @@
-import NoDataNotificationStyled from './styles';
+import NoDataNotificationStyled from "./styles";
 
 const NoDataNotification = () => {
   return (

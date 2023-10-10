@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const ShowDropdownIconStyled = styled.div`
   position: absolute;

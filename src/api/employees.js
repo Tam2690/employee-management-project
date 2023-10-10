@@ -1,6 +1,6 @@
-import request from '../utils/request';
+import request from "../utils/request";
 
-const ENTITY = 'employees';
+const ENTITY = "employees";
 
 export const getEmployeesList = async () => {
   const response = await request.get(ENTITY);

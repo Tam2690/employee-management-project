@@ -1,11 +1,11 @@
-import { ToastContainer } from 'react-toastify';
-import ManagementEmployeesStyle from './styles';
-import Title from '../Title';
-import CreateEmployeeButton from '../CreateEmployeeButton';
-import { FaPlus } from 'react-icons/fa6';
-import EmployeesList from '../EmployeesList';
-import { useEffect, useState } from 'react';
-import { getEmployeesList } from 'src/api/employees';
+import { ToastContainer } from "react-toastify";
+import ManagementEmployeesStyle from "./styles";
+import Title from "../Title";
+import CreateEmployeeButton from "../CreateEmployeeButton";
+import { FaPlus } from "react-icons/fa6";
+import EmployeesList from "../EmployeesList";
+import { useEffect, useState } from "react";
+import { getEmployeesList } from "src/api/employees";
 
 const ManagementEmployees = () => {
   const [employeesData, setEmployeesData] = useState([]);
@@ -15,7 +15,7 @@ const ManagementEmployees = () => {
   }, []);
 
   const customStyles = {
-    textAlign: 'center',
+    textAlign: "center",
   };
 
   return (

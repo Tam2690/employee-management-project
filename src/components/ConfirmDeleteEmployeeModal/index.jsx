@@ -1,8 +1,8 @@
-import { deleteEmployee } from 'src/api/employees';
-import Title from '../Title';
-import ConfirmDeleteEmployeeModalStyled from './styles';
-import { showToast } from 'src/hoc/withShowNotification';
-import PropTypes from 'prop-types';
+giimport { deleteEmployee } from "src/api/employees";
+import Title from "../Title";
+import ConfirmDeleteEmployeeModalStyled from "./styles";
+import { showToast } from "src/hoc/withShowNotification";
+import PropTypes from "prop-types";
 
 const ConfirmDeleteEmployeeModal = ({
   setIsShowConfirmDeleteModal,
@@ -13,7 +13,7 @@ const ConfirmDeleteEmployeeModal = ({
   const handleClickDelete = async () => {
     const response = await deleteEmployee(employeeId);
     setEmployeesData(response.data);
-    showToast('Delete employee successfully!');
+    showToast("Delete employee successfully!");
   };
 
   const handleClickCancel = () => {
@@ -21,7 +21,7 @@ const ConfirmDeleteEmployeeModal = ({
   };
 
   const filteredEmployee = employeesData.filter(
-    (employee) => employee.id === employeeId
+    (employee) => employee.id === employeeId,
   );
 
   return (

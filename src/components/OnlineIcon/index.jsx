@@ -1,4 +1,4 @@
-import OnlineIconStyled from './styles';
+import OnlineIconStyled from "./styles";
 
 const OnlineIcon = () => {
   return <OnlineIconStyled></OnlineIconStyled>;

@@ -1,5 +1,5 @@
-import TitleStyled from './styles';
-import PropTypes from 'prop-types';
+import TitleStyled from "./styles";
+import PropTypes from "prop-types";
 
 const Title = ({ content, customStyles }) => {
   return (
