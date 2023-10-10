@@ -9,6 +9,11 @@ const OnlineIconStyled = styled.div`
   left: 100px;
   top: 100px;
   z-index: 1;
+
+  @media (max-width: 500px) {
+    left: 80px;
+    top: 85px;
+  }
 `;
 
 export default OnlineIconStyled;

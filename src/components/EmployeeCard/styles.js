@@ -83,6 +83,11 @@ const EmployeeCardStyled = styled.div`
 
   @media (max-width: 500px) {
     width: 90%;
+
+    .employee-avatar {
+      width: 80px;
+      height: 80px;
+    }
   }
 `;
 export default EmployeeCardStyled;
