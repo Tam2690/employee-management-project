@@ -15,6 +15,12 @@ export const CreateEmployeeModalStyled = styled.div`
     display: flex;
     flex-direction: column;
 
+    & > input:first-child {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
     & > input {
       margin-top: 12px;
       padding: 10px 15px;
