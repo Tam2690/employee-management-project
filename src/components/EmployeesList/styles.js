@@ -16,7 +16,7 @@ const EmployeesListStyled = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(43, 203, 186, 1);
+    background-color: #6b6b6b;
     border-radius: 5px;
   }
 `;
